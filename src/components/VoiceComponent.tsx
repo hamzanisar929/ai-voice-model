@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import VoiceOrb from "@/components/VoiceOrb";
+import dynamic from "next/dynamic";
+
+const VoiceOrb = dynamic(() => import("@/components/VoiceOrb"), { ssr: false });
+
 
 
 // ElevenLabs
