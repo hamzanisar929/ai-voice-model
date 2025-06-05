@@ -5,8 +5,6 @@ import dynamic from "next/dynamic";
 
 const VoiceOrb = dynamic(() => import("@/components/VoiceOrb"), { ssr: false });
 
-
-
 // ElevenLabs
 import { useConversation } from "@11labs/react";
 
@@ -89,7 +87,6 @@ const VoiceChat = () => {
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          Voice Chat
           <div className="flex gap-2">
             <Button
               variant="outline"
@@ -108,7 +105,7 @@ const VoiceChat = () => {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          <VoiceOrb/>
+          <VoiceOrb />
           <div className="flex justify-center">
             {status === "connected" ? (
               <Button
@@ -134,7 +131,7 @@ const VoiceChat = () => {
           <div className="text-center text-sm">
             {status === "connected" && (
               <p className="text-green-600">
-                {isSpeaking ? "Agent is speaking..." : "Listening..."}
+                {isSpeaking ? "Vuca Max is speaking..." : "Listening..."}
               </p>
             )}
             {errorMessage && <p className="text-red-500">{errorMessage}</p>}
